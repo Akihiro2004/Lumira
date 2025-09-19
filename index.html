@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumira - Intelligent Search Engine</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="logo">
+                Lumira
+            </a>
+            <div class="header-actions">
+                <button class="icon-button" id="theme-toggle" title="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="icon-button" id="settings-btn" title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    class="search-box" 
+                    id="search-input" 
+                    placeholder="Search anything or ask a question..."
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+                <div class="search-actions">
+                    <button class="search-action-btn" id="voice-btn" title="Voice search">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <button class="search-action-btn primary" id="search-btn" title="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section class="tools-section">
+            <div class="tools-grid">
+                <div class="tool-card" data-tool="weather">
+                    <div class="tool-icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <h3 class="tool-title">Weather</h3>
+                    <p class="tool-description">Get current weather conditions and forecasts for any location worldwide</p>
+                </div>
+
+                <div class="tool-card" data-tool="translator">
+                    <div class="tool-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="tool-title">Translator</h3>
+                    <p class="tool-description">Translate text between multiple languages instantly</p>
+                </div>
+
+                <div class="tool-card" data-tool="calculator">
+                    <div class="tool-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="tool-title">Calculator</h3>
+                    <p class="tool-description">Perform mathematical calculations with an intuitive interface</p>
+                </div>
+
+                <div class="tool-card" data-tool="converter">
+                    <div class="tool-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3 class="tool-title">Unit Converter</h3>
+                    <p class="tool-description">Convert between different units of measurement</p>
+                </div>
+
+                <div class="tool-card" data-tool="stocks">
+                    <div class="tool-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="tool-title">Stocks</h3>
+                    <p class="tool-description">Track stock prices and market data in real-time</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Layout -->
+        <div class="results-layout" style="display: none;">
+            <!-- Search Results -->
+            <section class="results-section">
+                <div class="results-header">
+                    <h2 class="results-title">Search Results</h2>
+                    <span class="results-count" id="results-count">0 results</span>
+                </div>
+                <div class="results-list" id="results-list"></div>
+            </section>
+
+            <!-- AI Panel -->
+            <aside class="ai-panel">
+                <div class="ai-header">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI Assistant</h3>
+                </div>
+                <div class="ai-content">
+                    <div class="ai-response" id="ai-response">
+                        <p style="color: var(--text-secondary);">Ask me anything about your search results or any topic...</p>
+                    </div>
+                    <div class="ai-input-container">
+                        <input 
+                            type="text" 
+                            class="ai-input" 
+                            id="ai-input" 
+                            placeholder="Ask AI..."
+                            spellcheck="false"
+                        >
+                        <button class="ai-send-btn" id="ai-send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Load JavaScript -->
+    <script src="config.js"></script>
+    <script src="tools.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
